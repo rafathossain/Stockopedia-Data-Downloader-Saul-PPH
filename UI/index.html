@@ -34,26 +34,50 @@
 				<span class="contact100-form-title">
 					<img src="images/logo.png" width="70%">
 				</span>
+
+				<div id="complete" class="text-center" hidden>
+					<h3>Download Complete</h3>
+					<br>
+					<h5>To download another, close and reopen the application.</h5>
+				</div>
+
+				<div id="failed" class="text-center" hidden>
+					<h3>Download Failed!</h3>
+					<br>
+					<h5>Webpage not responding. Please close and reopen the application.</h5>
+				</div>
+
+				<div id="selectPage" class="text-center" hidden>
+					<img src="images/loading.gif" width="50%"/>
+					<h5 id="message">Time remaining: <span id="time"></span></h5>
+				</div>
+
 				<div class="text-center" id="loading" hidden>
 					<img src="images/loading.gif" width="50%"/>
 				</div>
 				<div id="content">
 					<div class="wrap-input100 validate-input">
 						<span class="label-input100">Email</span>
-						<input class="input100" type="email" id="email" autocomplete="off" placeholder="Enter stockopedia email addess">
+						<input class="input100" type="email" id="email" autocomplete="off" placeholder="Enter stockopedia email addess" value="sjjhr67@gmail.com">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input">
 						<span class="label-input100">Password</span>
-						<input class="input100" type="password" autocomplete="off" id="password" placeholder="Enter stockopedia password">
+						<input class="input100" type="text" autocomplete="off" id="password" placeholder="Enter stockopedia password" value="Hargreaves">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input">
+						<span class="label-input100">Timeout (Second)</span>
+						<input class="input100" type="text" id="timeout" autocomplete="off" placeholder="Enter filter timeout" value="90">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="container-contact100-form-btn">
 						<div class="wrap-contact100-form-btn">
 							<div class="contact100-form-bgbtn"></div>
-							<button type="button" class="contact100-form-btn">
+							<button type="button" class="contact100-form-btn" onclick="login_to_website()">
 								<span>
 									Login to Stockopedia
 									<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
@@ -79,6 +103,10 @@
 	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 	<!--===============================================================================================-->
 	<script src="js/main.js"></script>
+	<!--===============================================================================================-->
+	<script type="text/javascript" src="/eel.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+	<script src="js/controller.js"></script>
 </body>
 
 </html>

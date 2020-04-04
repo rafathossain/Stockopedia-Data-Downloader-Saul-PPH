@@ -11,7 +11,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 import eel
 
-eel.init('UI', allowed_extensions=['.js', '.html'])
+eel.init('UI')
 
 
 def create_directory():
@@ -116,5 +116,4 @@ def login_to_website(email, password, filterTime):
 		browser.quit()
 
 
-if __name__ == '__main__':
-	eel.start('index.html', port=0, size=(900, 700))
+eel.start('index.html', size=(900, 700))
